@@ -1,4 +1,4 @@
- Self Driving Car - Fuzzy Logic
+# Self Driving Car - Fuzzy Logic
 
 This is a project of IT4844 credit at Hanoi University of Science and Technology (HUST)
 
