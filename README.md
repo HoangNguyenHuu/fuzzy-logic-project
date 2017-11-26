@@ -22,12 +22,12 @@ sudo pip3 install pygame
 
 
 
-(sometimes it may not work (especially the Pygame library), maybe you need some other libraries, you can Google to know how to install these packages)
+(Sometimes it may not work (especially the Pygame library), maybe you need some other libraries! You can google to know how to install these packages)
 ```
 
-## Running the tests
+## Run the tests
 
 Run file **run.py** in package **main**
 
 You can change to any other map by change line 27 in file **run.py**: "map_s.add(maps.Map(0, 0, 1))" -
-the third parameter in (0, 0, 1) above is ordinal number of map, you can change 1 by 2, 3 for any other map.
+the third parameter in (0, 0, 1) is the ordinal number of map, you can change 1 by 2, 3 for any other map.
