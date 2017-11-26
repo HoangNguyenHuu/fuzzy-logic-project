@@ -46,26 +46,26 @@ def distance_far_dependency(distance):
 
 # angle dependency
 def angle_small_dependency(angle):
-    if 0 <= angle <= 5:
+    if 0 <= angle <= 7:
         return 1.0
-    if 5 <= angle <= 10:
-        return (10 - angle) / 5.0
+    if 7 <= angle <= 14:
+        return (14 - angle) / 7.0
     return 0.0
 
 
 def angle_medium_dependency(angle):
-    if 5 <= angle <= 10:
-        return (angle - 5) / 5.0
-    if 10 <= angle <= 15:
-        return (15 - angle) / 5.0
+    if 7 <= angle <= 14:
+        return (angle - 7) / 7.0
+    if 14 <= angle <= 21:
+        return (21 - angle) / 7.0
     return 0.0
 
 
 def angle_big_dependency(angle):
-    if angle >= 15:
+    if angle >= 21:
         return 1.0
-    if 10 <= angle <= 15:
-        return (angle - 10) / 5.0
+    if 14 <= angle <= 21:
+        return (angle - 14) / 7.0
     return 0.0
 
 
