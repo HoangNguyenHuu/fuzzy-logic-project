@@ -21,84 +21,84 @@ STOP = "Stop"
 
 # distance dependency
 def distance_near_dependency(distance):
-    if 0 <= distance <= 100:
+    if 0 <= distance <= 50:
         return 1.0
-    if 100 < distance < 200:
-        return (200 - distance) / 100.0
+    if 50 < distance < 100:
+        return (100 - distance) / 50.0
     return 0.0
 
 
 def distance_medium_dependency(distance):
-    if 100 <= distance <= 200:
-        return (distance - 100) / 100.0
-    if 200 <= distance <= 300:
-        return (300 - distance) / 100.0
+    if 50 <= distance <= 100:
+        return (distance - 50) / 50.0
+    if 100 <= distance <= 150:
+        return (150 - distance) / 50.0
     return 0.0
 
 
 def distance_far_dependency(distance):
-    if 200 <= distance <= 300:
-        return (distance - 200) / 100.0
-    if distance >= 300:
+    if 100 <= distance <= 150:
+        return (distance - 100) / 50.0
+    if distance >= 150:
         return 1.0
     return 0.0
 
 
 # angle dependency
 def angle_small_dependency(angle):
-    if 0 <= angle <= 5:
+    if 0 <= angle <= 7:
         return 1.0
-    if 5 <= angle <= 10:
-        return (10 - angle) / 5.0
+    if 7 <= angle <= 14:
+        return (14 - angle) / 7.0
     return 0.0
 
 
 def angle_medium_dependency(angle):
-    if 5 <= angle <= 10:
-        return (angle - 5) / 5.0
-    if 10 <= angle <= 15:
-        return (15 - angle) / 5.0
+    if 7 <= angle <= 14:
+        return (angle - 7) / 7.0
+    if 14 <= angle <= 21:
+        return (21 - angle) / 7.0
     return 0.0
 
 
 def angle_big_dependency(angle):
-    if angle >= 15:
+    if angle >= 21:
         return 1.0
-    if 10 <= angle <= 15:
-        return (angle - 10) / 5.0
+    if 14 <= angle <= 21:
+        return (angle - 14) / 7.0
     return 0.0
 
 
 # lamp dependency
 def lamp_red_dependency(time):
-    if time >= 10:
+    if time >= 6:
         return 1.0
-    if 5 <= time <= 10:
-        return (time - 5) / 5.0
+    if 3 <= time <= 6:
+        return (time - 3) / 3.0
     return 0.0
 
 
 def lamp_less_red_dependency(time):
-    if time <= 5:
+    if time <= 3:
         return 1.0
-    if 5 <= time <= 10:
-        return (10 - time) / 5.0
+    if 3 <= time <= 6:
+        return (6 - time) / 3.0
     return 0.0
 
 
 def lamp_less_green_dependency(time):
-    if 0 <= time <= 5:
+    if 0 <= time <= 3:
         return 1.0
-    if 5 <= time <= 10:
-        return (10 - time) / 5.0
+    if 3 <= time <= 6:
+        return (6 - time) / 3.0
     return 0.0
 
 
 def lamp_green_dependency(time):
-    if time >= 10:
+    if time >= 6:
         return 1.0
-    if 5 <= time <= 10:
-        return (time - 5) / 5.0
+    if 3 <= time <= 6:
+        return (time - 3) / 3.0
     return 0.0
 
 

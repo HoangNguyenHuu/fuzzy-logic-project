@@ -1,6 +1,6 @@
 import xlrd
 
-from defuzzification.speed_calculator import calculate_integrate
+from defuzzification.speed_calculator import calculate_speed
 from fuzzification.fuzzy_dependency import *
 
 
@@ -62,27 +62,27 @@ def cal_function_arguments(rule_found):
     return [new_arguments, label, min_arg]
 
 
-def fuzzy_deductive(distance, light_status, angle):
-    distance_dependencies = cal_distance_dependencies(distance)
-    light_dependencies = cal_lamp_dependencies(light_status)
-    angle_dependencies = cal_angle_dependencies(angle)
-    speed_total = 0
-    number_rule = 0
-    for distance_dependency in distance_dependencies:
-        for light_dependency in light_dependencies:
-            for angle_dependency in angle_dependencies:
-                # dis_label = distance_dependency[0]
-                # lig_label = light_dependency[0]
-                # ang_label = angle_dependency[0]
-                rule_found = find_light_rule(distance_dependency, light_dependency, angle_dependency)
-                # print("Rule found: ", rule_found)
-                arguments_func = cal_function_arguments(rule_found)
-                # print("Argument function: ", arguments_func)
-                integrate = calculate_integrate(arguments_func)
-                # print("Integrate: ", integrate)
-                speed_total += integrate
-                number_rule += 1
-                # print()
-
-    speed_average = round(speed_total / number_rule, 2)
-    return speed_average
+# def fuzzy_deductive(distance, light_status, angle):
+#     distance_dependencies = cal_distance_dependencies(distance)
+#     light_dependencies = cal_lamp_dependencies(light_status)
+#     angle_dependencies = cal_angle_dependencies(angle)
+#     speed_total = 0
+#     number_rule = 0
+#     for distance_dependency in distance_dependencies:
+#         for light_dependency in light_dependencies:
+#             for angle_dependency in angle_dependencies:
+#                 # dis_label = distance_dependency[0]
+#                 # lig_label = light_dependency[0]
+#                 # ang_label = angle_dependency[0]
+#                 rule_found = find_light_rule(distance_dependency, light_dependency, angle_dependency)
+#                 # print("Rule found: ", rule_found)
+#                 arguments_func = cal_function_arguments(rule_found)
+#                 # print("Argument function: ", arguments_func)
+#                 integrate = calculate_integrate(arguments_func)
+#                 # print("Integrate: ", integrate)
+#                 speed_total += integrate
+#                 number_rule += 1
+#                 # print()
+#
+#     speed_average = round(speed_total / number_rule, 2)
+#     return speed_average
