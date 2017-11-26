@@ -4,7 +4,7 @@ This is a project of subject IT4844 at Hanoi University of Science and Technolog
 
 ### Prerequisites
 
-This project is writen with **PyCharm IDE**, you can open it by Pycharm (or other python IDE)
+This project is writen with **PyCharm IDE**, you can open it with Pycharm (or any other python IDE)
 
 You need install python 3 for run this project. Moreover, you need install libraries:
 * [Pygame] (https://www.pygame.org/news)
