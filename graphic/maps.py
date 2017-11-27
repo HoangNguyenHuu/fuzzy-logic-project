@@ -29,7 +29,7 @@ class Map(pygame.sprite.Sprite):
         self.rect.topleft = self.x - cam_x + 600, self.y - cam_y + 300
 
     def get_map_navs(self):
-        with xlrd.open_workbook('media/toa-do.xlsx') as book:
+        with xlrd.open_workbook('../media/toa-do.xlsx') as book:
             sheet = book.sheet_by_index(self.map_number - 1)
 
             x_coordinate = [x for x in sheet.col_values(1)]

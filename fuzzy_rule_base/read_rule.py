@@ -3,7 +3,7 @@ import xlrd
 
 def read_light_rule():
     light_rule = []
-    with xlrd.open_workbook('rule/fuzzy_rule.xlsx') as book:
+    with xlrd.open_workbook('../rule/fuzzy_rule.xlsx') as book:
         sheet = book.sheet_by_index(1)
 
         distance = [x for x in sheet.col_values(1)]
@@ -19,7 +19,7 @@ def read_light_rule():
 
 def read_impediment_rule():
     impediment_rule = []
-    with xlrd.open_workbook('rule/fuzzy_rule.xlsx') as book:
+    with xlrd.open_workbook('../rule/fuzzy_rule.xlsx') as book:
         sheet = book.sheet_by_index(0)
 
         distance = [x for x in sheet.col_values(1)]
