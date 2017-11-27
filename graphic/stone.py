@@ -34,8 +34,8 @@ class Stone(pygame.sprite.Sprite):
             self.y = y
         elif self.status == Stone.VIEW:
             self.status = Stone.HIDE
-            self.x = 1400
-            self.y = 600
+            self.x = 200
+            self.y = 200
         pass
 
     # Realign the map

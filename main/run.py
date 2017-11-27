@@ -84,14 +84,14 @@ def main():
                 if pressed1:
                     print("left click")
                     current_index = controlled_car.current_nav_index
-                    random_index = random.randrange(current_index + 2, current_index + 8)
+                    random_index = random.randrange(current_index + 3, current_index + 6)
                     if random_index <= (len(maps.MAP_NAVS) - 3) and stone_impediment.status == 0:
                         x = maps.MAP_NAVS[random_index][0]
                         y = maps.MAP_NAVS[random_index][1]
                         stone_impediment.switch_status(x, y)
                         stone_status = (stone_impediment.status, random_index)
                     else:
-                        stone_impediment.switch_status(200, 200)
+                        stone_impediment.switch_status(0, 0)
                         stone_status = (0, len(maps.MAP_NAVS) - 1)
 
         cam.set_pos(controlled_car.x, controlled_car.y)
