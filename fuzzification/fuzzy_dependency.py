@@ -21,25 +21,25 @@ STOP = "Stop"
 
 # distance dependency
 def distance_near_dependency(distance):
-    if 0 <= distance <= 50:
+    if 0 <= distance <= 100:
         return 1.0
-    if 50 < distance < 100:
-        return (100 - distance) / 50.0
+    if 100 < distance < 200:
+        return (200 - distance) / 100.0
     return 0.0
 
 
 def distance_medium_dependency(distance):
-    if 50 <= distance <= 100:
-        return (distance - 50) / 50.0
-    if 100 <= distance <= 150:
-        return (150 - distance) / 50.0
+    if 100 <= distance <= 200:
+        return (distance - 100) / 100.0
+    if 200 <= distance <= 300:
+        return (300 - distance) / 100.0
     return 0.0
 
 
 def distance_far_dependency(distance):
-    if 100 <= distance <= 150:
-        return (distance - 100) / 50.0
-    if distance >= 150:
+    if 200 <= distance <= 300:
+        return (distance - 200) / 100.0
+    if distance >= 300:
         return 1.0
     return 0.0
 
