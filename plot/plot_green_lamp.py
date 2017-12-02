@@ -26,13 +26,13 @@ red = [lamp_red_dependency(tmp) for tmp in time2]
 
 # red dashes, blue squares and green triangles
 
-plt.xlabel("Time Green Lamp")
+plt.xlabel("Time Green Light")
 plt.ylabel("Dependency")
 
 plt.title("Green dependency")
 
-plt.text(1, 1.0, "less red")
-plt.text(9, 1.0, "red")
+plt.text(0.5, 1.0, "less green")
+plt.text(9, 1.0, "green")
 
 plt.plot(time1, less_red, time2, red)
 plt.show()

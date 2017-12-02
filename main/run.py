@@ -24,7 +24,7 @@ def main():
     stone_impediment = stone.Stone(200, 200, 90, 0)
 
     map_s = pygame.sprite.Group()
-    map_s.add(maps.Map(0, 0, 3))
+    map_s.add(maps.Map(0, 0, 2))
 
     start_x = maps.MAP_NAVS[0][0]
     start_y = maps.MAP_NAVS[0][1]
