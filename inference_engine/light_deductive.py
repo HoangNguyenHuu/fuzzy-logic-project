@@ -36,7 +36,7 @@ class LightDeductive:
                     if min_arg == 1:
                         new_arguments.append(0.5)
                     elif 0 < min_arg < 1:
-                        new_arguments.append(0.5 * min_arg)
+                        # new_arguments.append(0.5 * min_arg)
                         new_arguments.append(1 - 0.5 * min_arg)
                 if label == "Stop":
                     if min_arg == 1:

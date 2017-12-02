@@ -80,43 +80,43 @@ def write_function(arguments):
             return result_dependency, result_up_dependency, min_arg
 
     if label == "Slow":
-        if len(coefficient) == 1:
-            def result_dependency(x):
-                if 0 < x <= 0.5:
-                    return x / 0.5
-                if 0.5 < x <= 1:
-                    return (1 - x) / 0.5
-                return 0
+        # if len(coefficient) == 1:
+        #     def result_dependency(x):
+        #         if 0 < x <= 0.5:
+        #             return x / 0.5
+        #         if 0.5 < x <= 1:
+        #             return (1 - x) / 0.5
+        #         return 0
+        #
+        #     def result_up_dependency(x):
+        #         if 0 < x <= 0.5:
+        #             return x * x / 0.5
+        #         if 0.5 < x <= 1:
+        #             return (1 - x) * x / 0.5
+        #         return 0
+        #
+        #     return result_dependency, result_up_dependency, min_arg
+        #
+        # if len(coefficient) == 2:
+        def result_dependency(x):
+            if 0.5 < x <= coefficient[0]:
+                return min_arg
+            # if coefficient[0] < x <= coefficient[1]:
+            #     return min_arg
+            if coefficient[0] < x <= 1:
+                return (1 - x) / 0.5
+            return 0
 
-            def result_up_dependency(x):
-                if 0 < x <= 0.5:
-                    return x * x / 0.5
-                if 0.5 < x <= 1:
-                    return (1 - x) * x / 0.5
-                return 0
+        def result_up_dependency(x):
+            if 0.5 < x <= coefficient[0]:
+                return x * x / 0.5
+            # if coefficient[0] < x <= coefficient[1]:
+            #     return min_arg * x
+            if coefficient[0] < x <= 1:
+                return (1 - x) * x / 0.5
+            return 0
 
-            return result_dependency, result_up_dependency, min_arg
-
-        if len(coefficient) == 2:
-            def result_dependency(x):
-                if 0.5 < x <= coefficient[0]:
-                    return x / 0.5
-                if coefficient[0] < x <= coefficient[1]:
-                    return min_arg
-                if coefficient[1] < x <= 1:
-                    return (1 - x) / 0.5
-                return 0
-
-            def result_up_dependency(x):
-                if 0.5 < x <= coefficient[0]:
-                    return x * x / 0.5
-                if coefficient[0] < x <= coefficient[1]:
-                    return min_arg * x
-                if coefficient[1] < x <= 1:
-                    return (1 - x) * x / 0.5
-                return 0
-
-            return result_dependency, result_up_dependency, min_arg
+        return result_dependency, result_up_dependency, min_arg
 
     if label == "Stop":
         if min_arg == 1:
